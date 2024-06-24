@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PrivateChatController;
+use App\Http\Controllers\ChatMessageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,4 +19,5 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $req) {
     return $req->user();
 });
-Route::post('chatMessage', [PrivateChatController::class,'store']);
+Route::post('/staff', [PrivateChatController::class,'storeStaff']);
+Route::post('/chatMessage', [ChatMessageController::class,'store']);

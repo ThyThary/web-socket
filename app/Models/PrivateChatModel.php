@@ -1,48 +1,30 @@
 <?php
 
 namespace App\Models;
-use App\Events\pusherMessage;
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Http\Controllers\partConfigController;
 use App\Http\Controllers\responseController;
 use Exception;
 use Illuminate\Support\Facades\DB;
-
+use App\Events\staff;
 
 class PrivateChatModel extends Model
-
 {
-    use HasFactory;
-    public static function store($request)
-    {
+   public static function storeDataStaff($lname,$fname,$age)
+   {
         DB::beginTransaction();
         try
         {
-        // Params
-        $id = $request->id ?? null;
-        $message = $request->message ?? null;
-        $createBy = $_SESSION['userId'];
-        // INSERT
-        $result = DB::select("SELECT public.insert_chat_messages(?,?)",
-                                    [
-                                            $id ?? null,
-                                            $message ?? null
-                                    ]
-                                    );
-            // if ($result)
-            // {
-            //     // Event Broadcasting
-                broadcast(new pusherMessage($id, $message))->toOthers();
-                DB::commit();
-                return responseController::success($result);
-            // }
+            $result=DB::select("INSERT INTO public.staff (last_name, first_name, age) VALUES(?,?, ?) returning id",[$lname,$fname,$age]) ;
+            broadcast(new staff($lname,$fname,$age))->toOthers();
+            DB::commit();
+            return response()->json(['status'=>200,'resutl'=>$result],200);
         }
-        catch (Exception $e)
+        catch(Exception $e)
         {
             DB::rollBack();
-            return responseController::error($e->getMessage());
+            return response()->json($e->getMessage(),500);
         }
-    }
+   }
 }

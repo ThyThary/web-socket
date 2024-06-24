@@ -1,4 +1,5 @@
 window._ = require('lodash');
+window.$ = require('jquery');
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -32,10 +33,10 @@ window.Echo = new Echo({
     logToConsole: true,
     encrypted: true
 });
-window.onload=()=>{
-    alert(1);
-    Echo.channel('chat').listen('pusherMessage',(e)=>{
-        console.log(e);
-    });
-}
+// window.onload=()=>{
+//     alert(1);
+//     Echo.channel(`chat.${id}`).listen('chatMessage', (e) => {
+//         console.log(e);
+//     });
+// }
     
