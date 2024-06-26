@@ -12,11 +12,13 @@ class ChatMessageModel extends Model
 {
     use HasFactory;
     public static function storeData($message){
+        // dd($message);
         DB::beginTransaction();
         try{
             $result = DB::select("INSERT INTO public.chat_message (message) VALUES(?) returning id",[$message]);
-            // dd($result);
-            broadcast(new chatMessage($message))->toOthers();
+            $id=DB::select("SELECT id from chat_message where id=?",[$result[0]->id])[0]->id;
+            
+            broadcast(new chatMessage($id,$message))->toOthers();
             DB::commit();
             return response()->json(['status'=>200,'result'=>$result],200); 
         }catch(Exception $e){

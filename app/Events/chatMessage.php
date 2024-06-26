@@ -13,16 +13,16 @@ use Illuminate\Queue\SerializesModels;
 class chatMessage implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
-    // public $id;
+    public $id;
     public $data;
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct($data = null)
+    public function __construct($id=null,$data = null)
     {
-        // $this->id       = $id;
+        $this->id       = $id;
         $this->data  = $data;
     }
 
