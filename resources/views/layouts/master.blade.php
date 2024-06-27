@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -7,7 +8,9 @@
         @yield("style")
     </head>
     <body>
-        @yield("content")
+        <main>
+            @yield("content")
+        </main>
         {{-- @stack("script") --}}
         {{-- @push("script")@endpush --}}
     </body>
