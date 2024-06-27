@@ -2,7 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Input box style */
-.inputStyle{
+/* Form box */
+.inputBox{
  @apply border focus:border-sky-500 rounded-md p-1 focus:outline-none;
 }
+/* End form box  */
+/* Font style */
+.fontTittle{
+    @apply font-bold text-base text-cyan-900;
+}
+.fontSubTittle {
+    @apply  font-serif text-base;
+}
+/* End font style */

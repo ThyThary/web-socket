@@ -9,19 +9,19 @@
             <img class="h-32 w-full rounded-md" src="https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg&ga=GA1.1.2116175301.1718668800&semt=sph">
         </div>
         <div class=" absolute translate-y-[-63px] flex w-full justify-center">
-            <img class="min-w-[90px] min-h-[90px] w-[90px] rounded-full" src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png " alt="profile">
+            <img class="min-w-[90px] min-h-[90px] w-[90px] border-[3px] border-cyan-300 rounded-full" src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png " alt="profile">
         </div>
         <div class="flex flex-col justify-center text-center translate-y-10 m-5">
             <h4 class="text-teal-900 text-xl font-bold inline-block">Srong Sokleap</h4>
             <p for="accountant" class=" text-base font-normal mt-2">Junior Accountant</p>
-           <div class="flex flex-row w-full text-left bg-slate-300 rounded-md p-3 mt-5 shadow-sm">
+           <div class="flex flex-row w-full text-left bg-slate-200 rounded-md p-3 mt-6 shadow-sm">
                <div class="basis-1/4">
                     <ul>
-                        <li class="py-1 font-bold text-base text-cyan-900">Gender</li>
-                        <li class="py-1 font-bold text-base text-cyan-900">Education</li>
-                        <li class="py-1 font-bold text-base text-cyan-900">Mobile</li>
-                        <li class="py-1 font-bold text-base text-cyan-900">Email</li>
-                        <li class="py-1 font-bold text-base text-cyan-900">Address</li>
+                        <li class="py-1 fontTittle">Gender</li>
+                        <li class="py-1 fontTittle">Education</li>
+                        <li class="py-1 fontTittle">Mobile</li>
+                        <li class="py-1 fontTittle">Email</li>
+                        <li class="py-1 fontTittle">Address</li>
                     </ul>
                 </div>
                <div class="basis-[10%]">
@@ -35,11 +35,11 @@
                 </div>
                <div class="basis-[65%]">
                     <ul>
-                        <li class="py-1 font-serif text-base">Female</li>
-                        <li class="py-1 font-serif text-base">Bechelor</li>
-                        <li class="py-1 font-serif text-base">069 333 999</li>
-                        <li class="py-1 font-serif text-base">address123@gmail.com</li>
-                        <li class="py-1 font-serif text-base">Phnom Penh, Olympic</li>
+                        <li class="py-1 fontSubTittle">Female</li>
+                        <li class="py-1 fontSubTittle">Bechelor</li>
+                        <li class="py-1 fontSubTittle">069 333 999</li>
+                        <li class="py-1 fontSubTittle">address123@gmail.com</li>
+                        <li class="py-1 fontSubTittle">Phnom Penh, Olympic</li>
                     </ul>
                 </div>
            </div>
