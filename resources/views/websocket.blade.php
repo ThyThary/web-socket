@@ -13,8 +13,36 @@
         </div>
         <div class="flex flex-col justify-center text-center translate-y-10 m-5">
             <h4 class="text-teal-900 text-xl font-bold inline-block">Srong Sokleap</h4>
-            <p for="accountant" class=" text-base font-normal mb-2">Accountant</p>
-            <textarea name="message" id="message" cols="7" rows="4" class="inputStyle" placeholder="Message"></textarea>
+            <p for="accountant" class=" text-base font-normal mt-2">Junior Accountant</p>
+           <div class="flex flex-row w-full text-left bg-slate-300 rounded-md p-3 mt-5 shadow-sm">
+               <div class="basis-1/4">
+                    <ul>
+                        <li class="py-1 font-bold text-base text-cyan-900">Gender</li>
+                        <li class="py-1 font-bold text-base text-cyan-900">Education</li>
+                        <li class="py-1 font-bold text-base text-cyan-900">Mobile</li>
+                        <li class="py-1 font-bold text-base text-cyan-900">Email</li>
+                        <li class="py-1 font-bold text-base text-cyan-900">Address</li>
+                    </ul>
+                </div>
+               <div class="basis-[10%]">
+                    <ul>
+                        <li class="py-1 font-bold">:</li>
+                        <li class="py-1 font-bold">:</li>
+                        <li class="py-1 font-bold">:</li>
+                        <li class="py-1 font-bold">:</li>
+                        <li class="py-1 font-bold">:</li>
+                    </ul>
+                </div>
+               <div class="basis-[65%]">
+                    <ul>
+                        <li class="py-1 font-serif text-base">Female</li>
+                        <li class="py-1 font-serif text-base">Bechelor</li>
+                        <li class="py-1 font-serif text-base">069 333 999</li>
+                        <li class="py-1 font-serif text-base">address123@gmail.com</li>
+                        <li class="py-1 font-serif text-base">Phnom Penh, Olympic</li>
+                    </ul>
+                </div>
+           </div>
         </div>
     </div>
     </div>
