@@ -10,7 +10,7 @@
     <body>
         <main class="flex flex-row w-full h-screen">
             {{-- Side bar --}}
-            <section class="basis-[15%] h-full bg-blue-500 shadow-md overflow-y-auto">
+            <section id="sideBarId" class="basis-[15%] h-full bg-blue-500 shadow-md overflow-y-auto">
                <div class="flex flex-col h-16 min-h-16 text-white uppercase justify-center text-center font-bold text-3xl bg-blue-600 italic shadow-md">
                     Human Resource
                </div>
@@ -19,25 +19,26 @@
                </div>
             </section>
             {{-- Content --}}
-            <section class="basis-[85%] h-full min-w-[250px] bg-slate-50">
+            <section id="contentId" class="basis-[85%] h-full min-w-[250px] bg-slate-50">
+                {{-- Notifications --}}
                 <div class="absolute top-0 right-0 mt-16 shadow-sm mx-5 z-50" id="notifications">
                 </div>
                 <div class="flex flex-row h-16 min-h-16 text-sky-500 bg-white shadow-md">
                     <div class="basis-1/2 flex">
                         <div class="flex-initial w-24 ml-5 mt-2">
-                            <div class="flex min-w-12 min-h-12 w-12 hover:border-[3px] hover:border-blue-300 rounded-full items-center justify-center text-center">
+                            <div class="flex min-w-12 min-h-12 w-12 hover:border-[3px] hover:border-blue-300 rounded-full items-center justify-center text-center" onclick="sideBar('sideBarId','contentId')">
                                 <x-icons.bar class="text-blue-500 h-8 w-8"></x-icons.bar>
                             </div>
                         </div>
                     </div>
                     <div class="basis-1/2">
                         <div class=" flex flex-row">
-                            <span class="basis-[90%] flex justify-end text-end items-end pr-5">
-                                <div class="flex min-w-12 min-h-12 w-12 hover:border-[3px] hover:border-blue-300 rounded-full items-center justify-center text-center">
+                            <span class="basis-[93%] flex justify-end text-end items-end pr-3">
+                                <div class="flex min-w-12 min-h-12 w-12 hover:border-[3px] hover:border-blue-300 rounded-full items-center justify-center text-center" onclick="notification('notifications')">
                                     <x-icons.bell></x-icons.bell>
                                 </div>
                             </span>
-                            <span class="basis-[10%] flex justify-center pt-1.5 mr-5">
+                            <span class="basis-[7%] flex justify-center pt-1.5 mr-5">
                                 <img class="min-w-12 min-h-12 w-12 hover:border-[3px] hover:border-blue-300 rounded-full" src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png " alt="profile">
                            </span>
                         </div>

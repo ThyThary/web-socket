@@ -56,8 +56,8 @@
         window.Echo.channel('chat').listen('chatMessage', (e) => {
             if(e.data != ""){
                 $('#notifications').prepend(`<div id="toast-success-${e.id}" onmouseleave="hideNoti()" class=" flex items-center w-full max-w-auto p-2 min-w-[20rem] text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800 mt-2" role="alert">
-                    <div class="min-w-8 min-h-8 w-8 rounded-full mr-2">
-                        <img class="min-w-8 min-h-8 w-8 rounded-full cursor-pointer border-2 hover:border-sky-500" src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png " alt="profile">
+                    <div class="min-w-12 min-h-12 w-12 rounded-full mr-2">
+                        <img class="min-w-12 min-h-12 w-12 rounded-full cursor-pointer hover:border-[3px] hover:border-sky-500" src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png " alt="profile">
                     </div>  
                     <div class="pr-1 w-64 truncate"><span class='text-sm font-bold cursor-default'>Srong Sokleap :</span> 
                         <a href="#" class="hover:text-sky-500 text-sm font-normal">${e.data}</a>

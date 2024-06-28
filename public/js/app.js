@@ -2062,6 +2062,51 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+__webpack_require__(/*! ./app/toggle.js */ "./resources/js/app/toggle.js");
+
+/***/ }),
+
+/***/ "./resources/js/app/toggle.js":
+/*!************************************!*\
+  !*** ./resources/js/app/toggle.js ***!
+  \************************************/
+/***/ (() => {
+
+/**
+ * Toggles the visibility of an element and adjusts the layout of another element accordingly.
+ *
+ * @param {string} id - The ID of the element to toggle the visibility of.
+ * @param {string} contentId - The ID of the element to adjust the layout of.
+ * @returns {void}
+ */
+window.sideBar = function (id, contentId) {
+  try {
+    document.getElementById(id).classList.toggle('hidden');
+    document.getElementById(contentId).classList.toggle('basis-full');
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
+window.notification = function (id) {
+  try {
+    $("#".concat(id)).empty();
+    var _loop = function _loop(i) {
+      if (i < 1) {
+        $("#".concat(id)).prepend("<div class=\" h-96 bg-white shadow-md rounded-md overflow-y-auto p-5\" id=\"subNotifications\"></div>");
+      }
+      $('#subNotifications').prepend("<div id=\"toast-success-".concat(i, "\" class=\" flex items-center w-full max-w-auto p-2 min-w-[20rem] text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800 mb-2\" role=\"alert\">\n                <div class=\"min-w-12 min-h-12 w-12 rounded-full mr-2\">\n                    <img class=\"min-w-12 min-h-12 w-12 rounded-full cursor-pointer hover:border-[3px] hover:border-sky-500\" src=\"https://cdn-icons-png.flaticon.com/512/6997/6997662.png \" alt=\"profile\">\n                </div>  \n                <div class=\"pr-1 w-64 truncate\"><span class='text-sm font-bold cursor-default'>Srong Sokleap :</span> \n                    <a href=\"#\" class=\"hover:text-sky-500 text-sm font-normal\">Hello! I am a web developer.</a>\n                </div>\n            </div>"));
+      $("#btnHide-".concat(i)).on('click', function () {
+        $("#toast-success-".concat(i)).addClass('hidden');
+      });
+    };
+    for (var i = 0; i < 10; i++) {
+      _loop(i);
+    }
+    document.getElementById(id).classList.toggle('hidden');
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
 
 /***/ }),
 
