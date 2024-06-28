@@ -9,7 +9,7 @@
             <img class="h-32 w-full rounded-md" src="https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg&ga=GA1.1.2116175301.1718668800&semt=sph">
         </div>
         <div class=" absolute translate-y-[-63px] flex w-full justify-center">
-            <img class="min-w-[90px] min-h-[90px] w-[90px] border-[3px] border-cyan-300 rounded-full" src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png " alt="profile">
+            <img class="min-w-[90px] min-h-[90px] w-[90px] border-[3px] border-blue-300 rounded-full" src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png " alt="profile">
         </div>
         <div class="flex flex-col justify-center text-center translate-y-10 m-5">
             <h4 class="text-teal-900 text-xl font-bold inline-block">Srong Sokleap</h4>
@@ -48,6 +48,10 @@
     </div>
 </form>
 <script>
+    /**
+     * Listens for 'chatMessage' events on the 'chat' channel and displays a notification with the message content.
+     * The notification is displayed for 5 seconds, and can be hidden by hovering over it or clicking the close button.
+     */
     setTimeout(()=>{
         window.Echo.channel('chat').listen('chatMessage', (e) => {
             if(e.data != ""){
@@ -76,7 +80,7 @@
                 hideNoti = () =>{
                     try{
                         let id = event.target.id;
-                        $(`#${id}`).addClass('hidden');
+                        setTimeout(()=>{$(`#${id}`).addClass('hidden');},1000);
                     }catch(error){
                         console.error('Error:',error);
                     }
