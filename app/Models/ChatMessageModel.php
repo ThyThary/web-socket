@@ -12,7 +12,7 @@ class ChatMessageModel extends Model
 {
     use HasFactory;
     public static function storeData($message){
-        // dd($message);
+        
         DB::beginTransaction();
         try{
             $result = DB::select("INSERT INTO public.chat_message (message) VALUES(?) returning id",[$message]);

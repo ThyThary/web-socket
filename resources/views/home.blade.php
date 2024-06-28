@@ -1,9 +1,9 @@
 @extends('layouts/master')
 @section("content")
 {{-- Notifications --}}
-<div class="absolute top-0 right-0 mt-3 shadow-sm mx-5 z-50" id="notifications">
-</div>
+
 <form method="POST" name='frmPro' id="frmPro">
+    <div class="bg-white absolute min-w-[400px] min-h-[500px] top-[50%] left-[50%] rounded-2xl translate-y-[-50%] translate-x-[-50%] shadow-2xl">
     <div class="bg-white absolute min-w-[400px] min-h-[500px] top-[50%] left-[50%] rounded-2xl translate-y-[-50%] translate-x-[-50%] shadow-2xl">
         <div class="relative m-5 min-h-32 rounded-md max-h-32 bg-cover">
             <img class="h-32 w-full rounded-md" src="https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg&ga=GA1.1.2116175301.1718668800&semt=sph">
@@ -54,7 +54,7 @@
                 $('#notifications').prepend(`<div id="toast-success-${e.id}" onmouseleave="hideNoti()" class=" flex items-center w-full max-w-auto p-2 min-w-[20rem] text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800 mt-2" role="alert">
                     <div class="min-w-8 min-h-8 w-8 rounded-full mr-2">
                         <img class="min-w-8 min-h-8 w-8 rounded-full cursor-pointer border-2 hover:border-sky-500" src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png " alt="profile">
-                    </div>
+                    </div>  
                     <div class="pr-1 w-64 truncate"><span class='text-sm font-bold cursor-default'>Srong Sokleap :</span> 
                         <a href="#" class="hover:text-sky-500 text-sm font-normal">${e.data}</a>
                     </div>

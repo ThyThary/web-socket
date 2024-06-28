@@ -22,7 +22,7 @@ class chatMessage implements ShouldBroadcast
      */
     public function __construct($id=null,$data = null)
     {
-        $this->id       = $id;
+        $this->id    = $id;
         $this->data  = $data;
     }
 

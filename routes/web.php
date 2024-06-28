@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect('/websocket');
+    return redirect('/home');
 });
-Route::get('/websocket',function(){
-     return view('websocket');}
+Route::get('/home',function(){
+     return view('home');}
 );
